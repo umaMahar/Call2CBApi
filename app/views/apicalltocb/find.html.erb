@@ -1,0 +1,44 @@
+
+
+<H1> Please enter the <%= "#{session[:callType]}" %> </H1>
+
+<div>
+	<%= form_tag("/apicalltocb/show", :method => "get") do %>
+		
+		
+		<%if (params[:calltype] == "ID" )|| (session[:callType] == "ID") %>
+			<div>
+				<%= label_tag(:q1, "Job ID:") %>
+				 <%= text_field_tag(:value1) %>
+			</div>
+	 	<%elsif (params[:calltype] == "Keyword") || (session[:callType] == "Keyword")%> 
+			<div>
+				<span>
+					<%= label_tag(:q1, "Keyword:") %>
+				  <%= text_field_tag(:value2) %>
+				</span>
+				<span>
+				  <%= label_tag(:q2, "Location:") %>
+				  <%= text_field_tag(:value3) %>
+				</span>
+			</div>
+		<% end %>
+
+		<div>
+		
+			<span>
+			  <%= submit_tag("Submit") %>
+			</span>
+
+			<br><%= link_to 'Home', :action=>'home' %>
+
+		</div>
+	<% end %> 
+
+</div>
+</p>
+
+
+
+
+
