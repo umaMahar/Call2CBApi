@@ -35,11 +35,12 @@ module ApicalltocbHelper
 		j_loc		= @returnValue["ResponseJob"]["Job"]["LocationFormatted"]
 		j_company = @returnValue["ResponseJob"]["Job"]["Company"]
 		j_desc = CGI::unescapeHTML(j_desc)
-	
+
 
  		htmlID << "<h6>Company : " + j_company +"&nbsp&nbsp&nbsp&nbsp&nbspJob Title: "+ j_title +"</h6>"
     htmlID <<  "<br> Location: <b>" + j_loc + "</b>&nbsp&nbsp&nbsp&nbsp&nbspJob Apply Link: <b>"+(link_to "click to Apply to Job", applylink)+"</b>"
     htmlID <<   j_desc
+
 	end
 
 	def displayKeywordResults
@@ -54,6 +55,7 @@ module ApicalltocbHelper
 			j_company = a["Company"] || ""
 			j_desc = CGI::unescapeHTML(j_desc)
 		 
+
 		 	html<<"<h5>- Company : " + j_company +"&nbsp&nbsp&nbsp&nbsp&nbspJob Title: "+ j_title +"</h5>"
 		 	if !j_loc.empty?
 	 			html <<  "<br> Location: <b>" + j_loc + "</b>&nbsp&nbsp&nbsp&nbsp&nbsp"
@@ -62,6 +64,7 @@ module ApicalltocbHelper
 	    html << "<b>"+(link_to "click for Details & Apply to Job", j_link)+"</b>"
 	 		i +=1
 	 		if i==5   
+
 	 			break
 	 		end
 		end

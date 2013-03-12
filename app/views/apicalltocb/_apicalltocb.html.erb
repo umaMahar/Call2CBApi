@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 	
 		<ul class='border'>
@@ -29,6 +30,33 @@
 
 	
 
+=======
+<h1 align="left"> Job Results for <%= "#{session[:callType]}" %> search :</h1>
+
+
+
+<% if session[:callType] == 'ID' %>
+		<%= err = displayErr("ResponseJob")%>
+     <%if err.nil? && !@returnValue["ResponseJob"]["Job"].nil? && !@returnValue["ResponseJob"]["Job"].empty? %>  	
+       <%= displayIDResults.html_safe %>
+     <%end%>
+	
+<%elsif session[:callType] == 'Keyword' %>
+	
+	<%= err = displayErr("ResponseJobSearch")%>
+	<%if err.nil? %>
+		
+		<%if !@returnValue["ResponseJobSearch"]["Results"]["JobSearchResult"].nil? && !@returnValue["ResponseJobSearch"]["Results"]["JobSearchResult"].empty? %>
+
+			<%= displayKeywordResults.html_safe %>
+		
+
+		<%end%>
+	<%end%>
+
+
+<%end%>
+>>>>>>> 6a8bd422f118b853b87e094e104ad57b883a74d2
 
 
 
