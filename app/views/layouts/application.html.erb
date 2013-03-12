@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Call CB Api</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body class='<%= controller.controller_name %>'> 
+		<div id ="banner">
+			
+			
+			<%= @page_title || "Call CB Api" %></br>
+			
+
+			
+		</div>
+
+<%= yield %>
+
+</body>
+</html>

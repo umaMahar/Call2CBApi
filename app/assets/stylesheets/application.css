@@ -1,0 +1,86 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+#returnValue
+{
+		text-align: left;
+
+		width: 837px; 
+		height: 362px;
+}
+
+
+#banner {
+  background: #62AA2A;
+  padding: 30px;
+  border-bottom: 2px solid;
+  font: italic 18px "Times new Roman", serif; 
+  text-align: right;
+  color: black;
+  }
+
+h1 {
+    font-family: Helvetica, Geneva, Arial,
+          SunSans-Regular, sans-serif ;
+
+    font-color: #679B00;}
+
+ .main {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: thin dotted ;
+    font-size: 18px;
+    line-height: 18px;
+    
+  }
+
+.border{
+	border:1px solid #222;
+
+    font-size: 18px;
+    line-height: 18px;
+    width: 900px;
+    height: auto;
+    text-align: 20px,20px;
+
+}
+.submit_form input {
+	 width: 100px;
+	 height: 25px;
+	 font-size: 18px;
+}
+
+#calltype  {
+      width: 125px;
+      height: 25px;
+      font-size: 18px;
+}
+
+
+.form_content{
+
+    margin-right: 50px;
+    margin-top: 50px
+}
+
+a:link {
+    color: blue }
+
+a:visited {
+    color: purple }
+
+link{
+    font-size: 18px;
+}
+

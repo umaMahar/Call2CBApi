@@ -1,0 +1,34 @@
+
+	
+		<ul class='border'>
+			<% if session[:callType] == 'ID' %>
+				
+					<div class= 'form_content'>
+						<%= err = displayErr("ResponseJob")%>
+				     <%if err.nil? && !@returnValue["ResponseJob"]["Job"].nil? && !@returnValue["ResponseJob"]["Job"].empty? %>  	
+				       <%= displayIDResults.html_safe %>
+				     <%end%>		
+				   </div>
+				
+			<%elsif session[:callType] == 'Keyword' %>	
+				
+					<div class= 'form_content'>
+						<%= err = displayErr("ResponseJobSearch")%>
+						<%if err.nil? %>
+							<%if !@returnValue["ResponseJobSearch"]["Results"]["JobSearchResult"].nil? && !@returnValue["ResponseJobSearch"]["Results"]["JobSearchResult"].empty? %>
+
+								<%= displayKeywordResults.html_safe %>
+							<%end%>
+						<%end%>
+					</div>
+			
+			<%end%>
+		
+		</ul>
+
+
+	
+
+
+
+

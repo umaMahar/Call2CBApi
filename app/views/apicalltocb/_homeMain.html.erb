@@ -1,0 +1,20 @@
+<div>
+	<h1 align=centre>Job Search</h1>
+</div>
+
+<div class='main'>
+	<%= form_tag("/apicalltocb/find", :method => "get") do %>
+		<ul class='border'>
+			<div class= 'form_content'>
+			
+				  <%= label_tag(:q, "Select an option ( Lookup a job with ID / Keyword Search) :") %>
+				  <%= select_tag :calltype ,options_for_select([["JobDID","ID"], ["JobSearch","Keyword"]], "JobDID")%> 
+				
+				<br>
+				<br>
+
+			  <p class='submit_form'><%= submit_tag("Submit") %></p>
+			</div>
+			</ul>
+	<% end %> 
+</div>
